@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "[Python]을 이용해 파일 이름 한번에 변경하기"
-date: 2010-12-22 00:00:00 +0300
+date: 2019-12-22 00:00:00 +0300
 comments: true
+img: python.png
 description: Python을 이용해 파일 이름 한번에 변경하기.
 categories: Python
 tags: [Python, tips] # add tag
