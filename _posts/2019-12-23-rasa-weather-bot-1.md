@@ -30,7 +30,9 @@ Rasa X를 통해 챗봇을 더 쉽게 만들 수 있습니다.
 
 ### 설치하기
 
-Rasa 를 설치하기 위해선 Python(3.6 버전 또는 3.7 버전)이 설치되어 있어야 합니다. 
+Rasa 를 설치하기 위해선 [Python(3.6 버전 또는 3.7 버전)](https://www.python.org/downloads/)이 설치되어 있어야 합니다. 
+
+또 [Microsoft Visual C++ 14.0](https://visualstudio.microsoft.com/ko/downloads/) 가 설치되어 있어야 합니다.
 
 명령 프롬프트에서 아래의 명령어로 Rasa와 Rasa X를 설치합니다.
 
