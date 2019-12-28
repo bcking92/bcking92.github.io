@@ -3,7 +3,7 @@ layout: post
 title: "[Rasa]Open Source를 이용해 날씨 챗봇 만들기-1"
 date: 2019-12-23 00:00:00 +0300
 comments: true
-img: Rasa/Rasa-logo.png
+img: Rasa/rasa-logo.png
 visible: 1
 description: Rasa open source를 이용해 간단한 날씨 챗봇을 만들어 봅시다.
 categories: Chatbot
