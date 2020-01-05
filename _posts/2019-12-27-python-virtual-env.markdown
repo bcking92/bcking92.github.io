@@ -8,7 +8,6 @@ visible: 1
 description: Python 가상환경 설정하기기기기
 categories: Python
 tags: [Python]
-sitemap:
 ---
 
 ### 가상환경 사용하기

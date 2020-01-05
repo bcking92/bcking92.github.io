@@ -8,7 +8,6 @@ visible: 1
 description: Rasa open source를 이용해 간단한 날씨 챗봇을 만들어 봅시다.
 categories: Chatbot
 tags: [Chatbot, Rasa]
-sitemap:
 ---
 
 ### Rasa?

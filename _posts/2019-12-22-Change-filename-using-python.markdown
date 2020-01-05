@@ -8,7 +8,6 @@ visible: 1
 description: Python을 이용해 파일 이름 한번에 변경하기.
 categories: Python
 tags: [Python, tips] # add tag
-sitemap:
 ---
 
 - 파일 이름에서 특정 단어나 특정 부분을 일괄적으로 변경하고 싶을 때,
