@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Python] if __name__ == '__main__': ?? 이게 뭘까"
-date: 2019-1-05 00:00:00 +0300
+date: 2020-1-05 00:00:00 +0300
 comments: true
 img: python.png
 visible: 1
