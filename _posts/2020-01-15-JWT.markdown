@@ -35,7 +35,7 @@ Header는 위와 같이 구성되어 있고 이것은 각각
 - tye: JWT이다.
 라는 뜻입니다. 이 JSON 정보는 Base64Url로 인코드 되어서 JWT의 첫번 째 부분인 Header가 됩니다.
 실제로 위의 JSON 문자열을 Base64로 인코딩한 결과는 아래와 같습니다.
-```json
+```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 ```
 
@@ -67,7 +67,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 ```
 마찬가지로 payload도 Base64로 인코딩 되어서 jwt의 일부분이 됩니다. Payload의 담긴 정보(claim)들은 쉽게 복호화 될 수 있습니다. 그러므로 민감한 정보는 담지 않는 것이 좋습니다. 위의 payload를 인코딩한 값은 아래와 같습니다.
 
-```json
+```
 eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ
 ```
 
