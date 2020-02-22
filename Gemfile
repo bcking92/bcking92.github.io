@@ -18,7 +18,6 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-sitemap"
   gem "jekyll-paginate"
-  gem "jekyll-feed"
   gem "jemoji"
 end
 
