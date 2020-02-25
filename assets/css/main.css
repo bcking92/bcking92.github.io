@@ -84,7 +84,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
+  font-family: 'Noto Sans KR';
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -137,10 +137,13 @@ strong {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-code,
+code {
+  font-family: 'Nanum Gothic Coding';
+  font-size: 1em;
+}
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family:'Noto Sans KR';
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -231,7 +234,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: 'Noto Sans KR';
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -437,16 +440,18 @@ template {
 }
 
 .highlight {
-  background-color: #faf9f9;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  
+  background-color: #202020;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   margin: 0;
 }
 
 .highlighter-rouge {
-  color: #ce887b;
+  color: #eeeeee;
   font-weight: 400;
-  border: 1px solid #607D8B;
+  background-color: #202020;
+  /* border: 1px solid #607D8B; */
   -webkit-border-radius: 3px;
           border-radius: 3px;
   padding: 0.1rem 0.5rem;
@@ -462,18 +467,18 @@ template {
 
 /* Comment */
 .highlight .err {
-  color: #a00;
-  background-color: #faa;
+  color: rgb(170, 170, 170);
+  /* background-color: #faa; */
 }
 
 /* Error */
 .highlight .k {
-  color: #069;
+  color: rgb(218, 114, 218);
 }
 
 /* Keyword */
 .highlight .o {
-  color: #555;
+  color: #eeeeee;
 }
 
 /* Operator */
@@ -547,7 +552,7 @@ template {
 
 /* Generic.Traceback */
 .highlight .kc {
-  color: #069;
+  color: rgb(49, 111, 245);
 }
 
 /* Keyword.Constant */
@@ -557,7 +562,7 @@ template {
 
 /* Keyword.Declaration */
 .highlight .kn {
-  color: #069;
+  color: rgb(218, 114, 218);
 }
 
 /* Keyword.Namespace */
@@ -582,7 +587,7 @@ template {
 
 /* Literal.Number */
 .highlight .s {
-  color: #d44950;
+  color: #e79362c7;
 }
 
 /* Literal.String */
@@ -592,7 +597,7 @@ template {
 
 /* Name.Attribute */
 .highlight .nb {
-  color: #366;
+  color: rgb(102, 213, 247);
 }
 
 /* Name.Builtin */
@@ -627,12 +632,12 @@ template {
 
 /* Name.Function */
 .highlight .nl {
-  color: #99f;
+  color: rgb(131, 216, 255);
 }
 
 /* Name.Label */
 .highlight .nn {
-  color: #0cf;
+  color: rgb(243, 243, 243);
 }
 
 /* Name.Namespace */
@@ -642,12 +647,12 @@ template {
 
 /* Name.Tag */
 .highlight .nv {
-  color: #033;
+  color: rgb(230, 230, 230);
 }
 
 /* Name.Variable */
 .highlight .ow {
-  color: #000;
+  color: rgb(44, 98, 199);
 }
 
 /* Operator.Word */
@@ -667,7 +672,7 @@ template {
 
 /* Literal.Number.Hex */
 .highlight .mi {
-  color: #f60;
+  color: rgb(124, 221, 128);
 }
 
 /* Literal.Number.Integer */
@@ -693,7 +698,7 @@ template {
 
 /* Literal.String.Doc */
 .highlight .s2 {
-  color: #c30;
+  color: rgb(212, 113, 46);
 }
 
 /* Literal.String.Double */
@@ -773,7 +778,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Noto Sans KR';
   color: #515151;
   background-color: #fbfbfb;
   margin: 0;
@@ -948,7 +953,7 @@ table tfoot td {
   -webkit-border-radius: 100%;
           border-radius: 100%;
   overflow: hidden;
-  background-color: #333030;
+  background-color: #ffffff;
 }
 
 .about img {
@@ -969,7 +974,7 @@ table tfoot td {
 }
 
 .about .author-name {
-  font-family: 'PT Serif', serif;
+  font-family: 'Noto Sans KR';
   margin: 0 0 10px;
   position: relative;
   padding-bottom: 15px;
@@ -1162,7 +1167,7 @@ footer .copyright {
 }
 
 .post .post-content .post-title a {
-  font-family: 'PT Serif', serif;
+  font-family: 'Noto Sans KR';
   text-decoration: none;
   color: #263959;
 }
@@ -1362,9 +1367,17 @@ a.newer-posts:hover {
   opacity: .8;
 }
 
+.contents {
+  display: block;
+  background-color: rgb(249, 220, 255);
+  margin-top: 10px;
+  text-align: center;
+}
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+
+
   .post {
     width: 48%;
     max-width: 100%;
@@ -1391,6 +1404,11 @@ a.newer-posts:hover {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .contents {
+    display: inline;
+    background-color: white;
+  }
+
   .sidebar {
     position: relative;
     display: -webkit-box;
@@ -1453,6 +1471,10 @@ a.newer-posts:hover {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .contents {
+    display: inline;
+  }
+
   .content-box {
     padding: 10px;
   }
