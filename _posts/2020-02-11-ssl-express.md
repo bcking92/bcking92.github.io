@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "[Express] SSL 인증서 Express에 적용하기"
-date: 2020-2-11 00:00:00 +0300
+date: 2020-2-12 00:00:00 +0300
 comments: true
 img: expressjs.jpg
-visible: 0
+visible: 1
 description: expressJS 공부중입니다.
 categories: Backend
 tags: [Backend, Express, SSL]
