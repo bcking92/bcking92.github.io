@@ -1,0 +1,100 @@
+---
+layout: post
+title: "[Nginx] 무료 SSL 인증서 발급받고 Nginx로 적용하기"
+date: 2020-2-11 00:00:00 +0300
+comments: true
+img: Nginx.png
+visible: 1
+description: Nginx 공부중입니다.
+categories: Backend
+tags: [Backend, Nginx, SSL]
+---
+
+#### 1. sslforfree에서 무료 SSL 보안 인증서 발급받아 Nginx에 적용하기
+
+1. [SSL for free](https://www.sslforfree.com/)에 들어가서 도메인의 주소를 입력하고 Create Free SSL Certificate버튼을 클릭한다.
+
+2. 인증서를 서버에 직접 업로드해서 사용할 것이므로 Manual Verification(수동 인증)을 클릭한다.(DNS 말고)
+
+3. 인증을하려면 80번 포트가 열려있어야 댄다. 뭐 이런 이야기가 나온다. Manually Verify Domain(수동으로 도메인 인증하기) 버튼을 누른다.
+
+4. 버튼을 누르면 1번부터 7번항목 까지 순서가 나오는데 1번에서 verification file(인증 파일)을 다운로드 받는다.
+
+5. 다운로드 받은 파일을 서버에 올리고 `http://host/.well-known/acme-challenge/인증파일` 주소로 접근 했을 때 인증파일에 접근할 수 있도록 만들어 주면 된다.
+
+   우리는 Nginx를 사용하고 있으므로 서버 설정으로 들어가 위의 루트를 추가해 준다.
+
+   ```
+   server {
+   ...
+   	location /.well-known {
+   		root 인증 파일이 저장된 경로
+   	}
+   ...
+   }
+   ```
+
+   이렇게 추가해 주면 된다. 이 때 파일 저장 경로를 시크릿 폴더로 만들었더니 root 설정에서 인식을 못해서 일반 폴더로 바꿔주었다. 이 것 때문에 자꾸 안되서 고생했다.
+
+6. Nginx를 restart 해주고 위의 주소로 접근 했을 때 인증파일에 접근할 수 있는지 확인해 본다.
+
+7. 접근이 잘 되면 Download SSL Certification 버튼을 눌러 인증서를 다운받는다.
+
+8. 인증서는 압축파일로 되어있고 압축을 풀면 3개의 파일이 나온다.
+
+   - ca_bundle.crt
+   - certificate.crt
+   - private.key
+
+   IIS 사용자라면 인증서를 pfx파일로, Tomcat 사용자라면 인증서를 jks파일로 변환 해주어야 하지만 우리 서버는 Nginx이므로 그냥 사용해도 된다. 파일 3개 전부를 서버에 올려주고 적당한 폴더를 만들어 집어넣는다. (예시. /certs/)
+
+9. 이제 Nginx 설정에서 인증서를 등록하면 끝이다.
+
+   ```nginx
+   server {
+   	listen 80;
+   	listen 443 ssl; # 443 포트를 열어준다
+       
+       server_name host;
+       
+       ssl_certificate /certs/certificate.crt;	# 인증서 파일과
+       ssl_certificate_key /certs/private.key; # 프라이빗키 정보를 설정한다.
+       ...
+   }
+   ```
+
+   끝.
+
+   이긴 한데 이렇게하면 우리의 사이트에 유저들이 http로 들어올 수 도 있고 https로 들어올 수도 있다. http로 들어오는 친구들의 정보를 보호하기 위해 친절하게 https로 redirect 시켜버리자. redirect를 위해 server 뭉치를 분리한다.
+
+   ```nginx
+   server {
+   	listen 80;
+   	server_name host;
+   	location / {
+   		return 301 https://$host$request_uri;
+           # return 301을 이용해 redirect 시켜주는데
+           # $host = server_name 이고
+           # $request_uri = host 하위의 uri이다. 
+   	}
+   }
+   
+   server {
+       listen 443 ssl;
+       server_name host;
+       
+       ssl_certificate /certs/certificate.crt;
+       ssl_certificate_key /certs/private.key;
+       
+       location / {
+           ...
+       }
+       ...
+   }
+   ```
+
+   이런 식으로 하면 http로 들어오는 친구들도 https로 리다이렉트 시킬 수 있다.
+
+   
+
+10. Let's Encrypt의 무료 인증서는 3개월마다 갱신해야 한다.

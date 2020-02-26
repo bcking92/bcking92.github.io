@@ -4,7 +4,7 @@ title: "[Nginx] SPA 호스팅, 새로고침 404 Not Found 문제 해결하기"
 date: 2020-2-08 00:00:00 +0300
 comments: true
 img: Nginx.png
-visible: 0
+visible: 1
 description: Nginx 공부중입니다.
 categories: Backend
 tags: [Backend, Nginx]
