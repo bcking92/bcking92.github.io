@@ -728,7 +728,7 @@ template {
 
 /* Literal.String.Regex */
 .highlight .s1 {
-  color: #c30;
+  color: rgb(212, 113, 46);
 }
 
 /* Literal.String.Single */
