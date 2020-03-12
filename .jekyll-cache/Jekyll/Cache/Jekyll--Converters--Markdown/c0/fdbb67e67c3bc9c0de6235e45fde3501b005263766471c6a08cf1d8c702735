@@ -1,0 +1,3 @@
+I"�<p>Nginx로 정적파일을 호스팅하다가 새로고침시 404 Not Found 페이지가 뜨는 문제가 생겼다.
+이 문제를 해결하기 위해 config에 try_files $uri $uri/ /index.htm 를 추가해야했다.</p>
+:ET
