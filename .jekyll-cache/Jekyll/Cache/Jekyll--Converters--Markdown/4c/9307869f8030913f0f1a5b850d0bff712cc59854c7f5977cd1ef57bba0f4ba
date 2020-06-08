@@ -51,13 +51,13 @@
 
     <div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">server</span> <span class="p">{</span>
 	<span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
-	<span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span><span class="p">;</span> <span class="c1"># 443 포트를 열어준다
-</span>       
+	<span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span><span class="p">;</span> <span class="c1"># 443 포트를 열어준다</span>
+       
     <span class="kn">server_name</span> <span class="s">host</span><span class="p">;</span>
        
-    <span class="kn">ssl_certificate</span> <span class="n">/certs/certificate.crt</span><span class="p">;</span>	<span class="c1"># 인증서 파일과
-</span>    <span class="kn">ssl_certificate_key</span> <span class="n">/certs/private.key</span><span class="p">;</span> <span class="c1"># 프라이빗키 정보를 설정한다.
-</span>    <span class="kn">...</span>
+    <span class="kn">ssl_certificate</span> <span class="n">/certs/certificate.crt</span><span class="p">;</span>	<span class="c1"># 인증서 파일과</span>
+    <span class="kn">ssl_certificate_key</span> <span class="n">/certs/private.key</span><span class="p">;</span> <span class="c1"># 프라이빗키 정보를 설정한다.</span>
+    <span class="kn">...</span>
 <span class="err">}</span>
 </code></pre></div>    </div>
 
@@ -70,10 +70,10 @@
 	<span class="kn">server_name</span> <span class="s">host</span><span class="p">;</span>
 	<span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
 		<span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span>
-        <span class="c1"># return 301을 이용해 redirect 시켜주는데
-</span>        <span class="c1"># $host = server_name 이고
-</span>        <span class="c1"># $request_uri = host 하위의 uri이다. 
-</span>	<span class="p">}</span>
+        <span class="c1"># return 301을 이용해 redirect 시켜주는데</span>
+        <span class="c1"># $host = server_name 이고</span>
+        <span class="c1"># $request_uri = host 하위의 uri이다. </span>
+	<span class="p">}</span>
 <span class="p">}</span>
    
 <span class="k">server</span> <span class="p">{</span>

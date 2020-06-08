@@ -8,15 +8,15 @@
 
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
   
-<span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s">'./'</span><span class="p">)</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="s">'./'</span><span class="p">)</span>
   
 <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
     <span class="k">if</span> <span class="nb">file</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span> <span class="o">!=</span> <span class="s">'py'</span><span class="p">:</span>
         <span class="n">name</span> <span class="o">=</span> <span class="nb">file</span>
-        <span class="n">new_name</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'원래 글자'</span><span class="p">,</span> <span class="s">'바꿀 글자'</span><span class="p">)</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'./'</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="n">new_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'./'</span><span class="p">,</span> <span class="n">new_name</span><span class="p">)</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">new_name</span><span class="p">)</span>
+        <span class="n">new_name</span> <span class="o">=</span> <span class="nb">file</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'원래 글자'</span><span class="p">,</span> <span class="s">'바꿀 글자'</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="s">'./'</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">new_name</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="s">'./'</span><span class="p">,</span> <span class="n">new_name</span><span class="p">)</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">rename</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">new_name</span><span class="p">)</span>
 </code></pre></div>    </div>
 
     <p>간단합니다.</p>
