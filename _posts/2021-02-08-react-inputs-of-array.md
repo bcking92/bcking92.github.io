@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[React] inputs of Array useState 사용하기"
+title: "[React] array of input react useState 사용하기"
 date: 2021-02-08 00:00:00 +0300
 comments: true
-description: useState 에서 inputs of Array 사용하는 방법
+description: useState 에서 array of input 사용하는 방법
 img: react.jpg 
 visible: 1
 categories: react
