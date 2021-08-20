@@ -128,7 +128,7 @@ comments:
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
     clientID    : 'a9aa2a7ff5ce3656f3c8' # GitHub Application Client ID
-    clientSecret: '5113a6fbb7a0e209ee31de89079bb1f89baee734' # GitHub Application Client Secret
+    clientSecret: 'fd9005d715c2e12afe20127b1153492939ae6aa4' # GitHub Application Client Secret
     repository  : 'bcking92.github.io' # GitHub repo
     owner       : 'bcking92' # GitHub repo owner
     admin: ['bcking92'] # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
