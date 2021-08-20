@@ -118,20 +118,20 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: disqus # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
-  disqus:
-    shortname: https-bcking92-github-io
+  disqus: #
+    shortname: #
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    clientID    : Iv1.a741af075821ec7f # GitHub Application Client ID
+    clientSecret: 9c1f3ac7c0fa36ab513166709e94e5703b5df80e # GitHub Application Client Secret
+    repository  : bcking92.github.io # GitHub repo
+    owner       : bcking92 # GitHub repo owner
+    admin: ['bcking92'] # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
   ## Valine

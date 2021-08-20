@@ -6,6 +6,7 @@ article_header:
   type: cover
   image:
     src: /assets/images/react.jpg
+key: react-useState
 ---
 
 ## 1. input 태그의 value를 useState hook으로 관리하기
