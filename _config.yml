@@ -127,7 +127,7 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : 'Iv1.a741af075821ec7f' # GitHub Application Client ID
+    clientID    : 'a741af075821ec7f' # GitHub Application Client ID
     clientSecret: '9c1f3ac7c0fa36ab513166709e94e5703b5df80e' # GitHub Application Client Secret
     repository  : 'bcking92.github.io' # GitHub repo
     owner       : 'bcking92' # GitHub repo owner
