@@ -26,6 +26,8 @@ titles:
 key: page-about
 ---
 
-- 2년차 백엔드 개발자
-
-## 개발 잘하고싶다.
+## Backend Developer
+- java
+- kotlin
+- Spring
+- k8s
